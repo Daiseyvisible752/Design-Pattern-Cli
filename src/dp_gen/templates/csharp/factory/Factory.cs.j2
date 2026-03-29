@@ -1,0 +1,50 @@
+namespace {{ name }}Factory
+{
+    public abstract class {{ name }}Product
+    {
+        public abstract void Operation();
+    }
+
+    public class ConcreteProductA : {{ name }}Product
+    {
+        public override void Operation()
+        {
+            System.Console.WriteLine("ConcreteProductA Operation");
+        }
+    }
+
+    public class ConcreteProductB : {{ name }}Product
+    {
+        public override void Operation()
+        {
+            System.Console.WriteLine("ConcreteProductB Operation");
+        }
+    }
+
+    public abstract class {{ name }}Creator
+    {
+        public abstract {{ name }}Product FactoryMethod();
+
+        public void SomeOperation()
+        {
+            var product = FactoryMethod();
+            product.Operation();
+        }
+    }
+
+    public class ConcreteCreatorA : {{ name }}Creator
+    {
+        public override {{ name }}Product FactoryMethod()
+        {
+            return new ConcreteProductA();
+        }
+    }
+
+    public class ConcreteCreatorB : {{ name }}Creator
+    {
+        public override {{ name }}Product FactoryMethod()
+        {
+            return new ConcreteProductB();
+        }
+    }
+}

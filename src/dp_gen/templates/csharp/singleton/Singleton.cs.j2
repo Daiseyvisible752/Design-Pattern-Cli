@@ -1,0 +1,26 @@
+namespace {{ name }}Singleton
+{
+    public sealed class {{ name }}
+    {
+        private static readonly {{ name }} _instance = new {{ name }}();
+
+        // Private constructor prevents instantiation from outside
+        private {{ name }}()
+        {
+            // Initialization logic
+        }
+
+        public static {{ name }} Instance
+        {
+            get
+            {
+                return _instance;
+            }
+        }
+
+        public void DoSomething()
+        {
+            System.Console.WriteLine("{{ name }} Singleton is doing something.");
+        }
+    }
+}
