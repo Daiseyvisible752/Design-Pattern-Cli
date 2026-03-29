@@ -1,0 +1,25 @@
+from abc import ABC, abstractmethod
+
+class {{ name }}Strategy(ABC):
+    @abstractmethod
+    def execute(self):
+        pass
+
+class Concrete{{ name }}Strategy({{ name }}Strategy):
+    def execute(self):
+        print("Executing Concrete{{ name }}Strategy")
+
+class {{ name }}Context:
+    def __init__(self, strategy: {{ name }}Strategy):
+        self._strategy = strategy
+
+    def set_strategy(self, strategy: {{ name }}Strategy):
+        self._strategy = strategy
+
+    def execute_strategy(self):
+        self._strategy.execute()
+
+if __name__ == "__main__":
+    strategy = Concrete{{ name }}Strategy()
+    context = {{ name }}Context(strategy)
+    context.execute_strategy()

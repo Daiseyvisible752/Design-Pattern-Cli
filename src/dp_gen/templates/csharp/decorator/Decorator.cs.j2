@@ -1,0 +1,57 @@
+namespace {{ name }}Decorator
+{
+    public abstract class {{ name }}Component
+    {
+        public abstract void Operation();
+    }
+
+    public class Concrete{{ name }}Component : {{ name }}Component
+    {
+        public override void Operation()
+        {
+            System.Console.WriteLine("Concrete{{ name }}Component.Operation()");
+        }
+    }
+
+    public abstract class {{ name }}Decorator : {{ name }}Component
+    {
+        protected {{ name }}Component _component;
+
+        public void SetComponent({{ name }}Component component)
+        {
+            _component = component;
+        }
+
+        public override void Operation()
+        {
+            if (_component != null)
+            {
+                _component.Operation();
+            }
+        }
+    }
+
+    public class Concrete{{ name }}DecoratorA : {{ name }}Decorator
+    {
+        public override void Operation()
+        {
+            base.Operation();
+            System.Console.WriteLine("Concrete{{ name }}DecoratorA.Operation()");
+        }
+    }
+
+    public class Concrete{{ name }}DecoratorB : {{ name }}Decorator
+    {
+        public override void Operation()
+        {
+            base.Operation();
+            AddedBehavior();
+            System.Console.WriteLine("Concrete{{ name }}DecoratorB.Operation()");
+        }
+
+        void AddedBehavior()
+        {
+            System.Console.WriteLine("Added Behavior in Decorator B");
+        }
+    }
+}

@@ -1,0 +1,22 @@
+namespace {{ name }}Pattern
+{
+    public class {{ name }}Context
+    {
+        private I{{ name }}Strategy _strategy;
+
+        public {{ name }}Context(I{{ name }}Strategy strategy)
+        {
+            _strategy = strategy;
+        }
+
+        public void SetStrategy(I{{ name }}Strategy strategy)
+        {
+            _strategy = strategy;
+        }
+
+        public void ExecuteStrategy()
+        {
+            _strategy.Execute();
+        }
+    }
+}

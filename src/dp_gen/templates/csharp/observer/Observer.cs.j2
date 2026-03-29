@@ -1,0 +1,47 @@
+using System.Collections.Generic;
+
+namespace {{ name }}Observer
+{
+    public interface I{{ name }}Observer
+    {
+        void Update(string message);
+    }
+
+    public class {{ name }}Subject
+    {
+        private List<I{{ name }}Observer> _observers = new List<I{{ name }}Observer>();
+
+        public void Attach(I{{ name }}Observer observer)
+        {
+            _observers.Add(observer);
+        }
+
+        public void Detach(I{{ name }}Observer observer)
+        {
+            _observers.Remove(observer);
+        }
+
+        public void Notify(string message)
+        {
+            foreach (var observer in _observers)
+            {
+                observer.Update(message);
+            }
+        }
+    }
+
+    public class Concrete{{ name }}Observer : I{{ name }}Observer
+    {
+        private string _observerName;
+
+        public Concrete{{ name }}Observer(string name)
+        {
+            _observerName = name;
+        }
+
+        public void Update(string message)
+        {
+            System.Console.WriteLine($"Observer {_observerName} received: {message}");
+        }
+    }
+}
